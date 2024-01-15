@@ -10,12 +10,20 @@ import { Layout, Container } from '../../components/Styles/Common'
 
 const OrderPage = () => {
 
+  useEffect(() => {
+    axios.get(`http://localhost:8000/`).then((res) => {
+      const data = res
+      console.log(data, "데이터 불러오기")
+    }).catch((error) => {
+      console.error(error)
+    })
+  }, [])
 
   return(
     <>
       <Layout>
         <Container>
-          
+
         </Container>
       </Layout>
     </>

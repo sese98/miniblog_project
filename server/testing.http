@@ -1,0 +1,17 @@
+get http://localhost:8000/
+
+###
+get http://localhost:8000/qs?p1=aa
+
+###
+post http://localhost:8000/hello
+
+###
+post http://localhost:8000/post-req
+#json 형식으로 요청
+Content-Type: application/json; charset=UTF-8
+
+{
+  "name": "이름입니다",
+  "age": 11
+}
